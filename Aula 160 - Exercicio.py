@@ -14,10 +14,7 @@ print()
 
 # Aumenta 10%
 for produto in produtos:
-    preco = produto.get('preco')
-    preco = preco*1.1
-    preco = float("{:.2f}".format(preco))
-    produto.update({'preco': preco})
+    produto.update({'preco': round(produto['preco'] * 1.1, 2)})
 
 print('Produtos +10%:')
 print(*produtos , sep='\n')
